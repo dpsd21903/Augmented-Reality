@@ -20,12 +20,21 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-        <a-marker preset="hiro">
+        <html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Particle System Component Example</title>
+    <meta name="description" content="Hello, World!">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
+  </head>
+  <body>
+    <a-scene>
+            <a-marker preset="hiro">
              <a-box position="1 0 0" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 0 0" radius="0.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="0.5 0 0" radius="0.3" height="1.5" color="#FFC65D"></a-cylinder>
       <a-sky color="#ECECEC"></a-sky>
-            <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
