@@ -25,8 +25,20 @@
       <a-sphere position="0 0 0" radius="0.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="0.5 0 0" radius="0.3" height="1.5" color="#FFC65D"></a-cylinder>
       <a-sky color="#ECECEC"></a-sky>
+   <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
+            
+              <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script> 
+    <script src="aframe-speech-command-component.js"></script> 
+            <a-entity id="annyang" annyang-speech-recognition></a-entity>
+            <a-entity id="menu"
+              speech-command__start="command: show menu; type: snow; attribute: visible; value: true;"
+              speech-command__stop="command: hide menu; type: snow; attribute: visible; value: false;">
+              ...
+              ...
+</a-entity>
+            
         </a-scene>
     </body>
 </html>
